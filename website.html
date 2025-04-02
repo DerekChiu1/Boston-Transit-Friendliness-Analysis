@@ -1,15 +1,120 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 
 <head>
-  <meta charset='UTF-8'>
-  <script src='https://d3js.org/d3.v7.min.js'></script>
-  <title>DS 4200 Final Project Website</title>
+  <meta charset="UTF-8">
+  <title>Boston Neighborhood Transit Friendliness</title>
+
+  <!-- D3 -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="website.css">
 </head>
 
 <body>
-  <h1>Boston Neighborhood Walkability Map</h1>
-  <h2>Neighborhood Area VS Transit Friendliness Index</h1>
+  <header>
+    <h1>Mapping Transit Friendliness in Boston Neighborhoods</h1>
+  </header>
+
+  <!-- INTRO -->
+  <div class="section">
+    <h2>Introduction</h2>
+    <p>
+      Walkability and accessible infrastructure are key factors in the quality of life for urban residents. Boston, ranked 4th in the nation for public transit usage, presents a compelling case for understanding the spatial distribution of sidewalks, bike paths, and subway lines. This project introduces a Transit Friendliness Index (TFI) to evaluate and visualize the accessibility of different neighborhoods in Boston.
+    </p>
+  </div>
+
+  <!-- METHODOLOGY -->
+  <div class="section">
+    <h2>Methodology</h2>
+    <p>
+      Our dataset sources include GeoJSON and shapefiles from <a href="https://data.boston.gov">Data.Boston.gov</a> and <a href="https://www.mass.gov/info-details/massgis-data-mbta-rapid-transit">MassGIS</a>. Using Python with GeoPandas, we aligned coordinate systems, cleaned invalid geometries, and calculated densities and lengths of infrastructure per neighborhood. These metrics were then synthesized into a custom Transit Friendliness Index (TFI), accounting for sidewalk coverage, bike path density, and subway proximity.
+    </p>
+  </div>
+
+  <!-- VISUALIZATION 1 -->
+  <div class="section">
+    <h2>Sidewalk and Bike Path Densities by Neighborhood</h2>
+    <div class="viz">
+      <img src="sidewalk_bike_density_bar.png" alt="Bar plot of sidewalk and bike path density by neighborhood">
+    </div>
+    <p>
+      This static bar chart highlights the variation in sidewalk and bike path densities across Boston neighborhoods. It reveals infrastructure concentration in central areas like Back Bay and Downtown, and a relative scarcity in outer neighborhoods such as West Roxbury.
+    </p>
+  </div>
+
+  <!-- VISUALIZATION 2 -->
+  <div class="section">
+    <h2>Neighborhood Area vs. Transit Friendliness Index</h2>
+    <p>
+      This D3 scatter plot compares each neighborhood's physical area to its overall TFI score. The trend suggests smaller, denser areas often rank higher in walkability, potentially due to more compact and accessible layouts.
+    </p>
+    <div class="viz" id="area-vs-tfi-scatter">
+      <!-- D3 will render scatterplot here -->
+    </div>
+  </div>
+
+  <!-- VISUALIZATION 3 -->
+  <div class="section">
+    <h2>Interactive Map: Sidewalk and Bike Path Infrastructure</h2>
+    <p>
+      This map provides a structural overview of Boston’s sidewalk and bike path networks. Toggle layers on or off to explore where infrastructure is concentrated and where gaps might exist. The interactive functionality helps identify priorities for transit-oriented development.
+    </p>
+    <div class="viz interactive-map" id="infrastructure-map">
+      <!-- Interactive map overview will render here -->
+    </div>
+  </div>
+
+  <!-- VISUALIZATION 4 -->
+  <div class="section">
+    <h2>Interactive Map: Walkability Scores by Neighborhood</h2>
+    <p>
+      Each Boston neighborhood is shaded based on its calculated TFI score. Hover or click to explore walkability values, view detailed metrics like average sidewalk and bike path length, and identify areas with strong or weak infrastructure support.
+    </p>
+    <div class="viz interactive-map" id="walkability-map">
+      <!-- Interactive TFI choropleth map will render here -->
+    </div>
+  </div>
+
+  <!-- VISUALIZATION 5 -->
+  <div class="section">
+    <h2>Transit Friendliness Index by Neighborhood</h2>
+    <p>
+      This interactive lollipop chart ranks Boston’s neighborhoods by their Transit Friendliness Index score. Use the slider to filter neighborhoods within specific score ranges and highlight outliers with particularly high or low accessibility.
+    </p>
+    <div class="viz" id="tfi-lollipop-chart">
+      <!-- D3 lollipop chart will render here -->
+    </div>
+  </div>
+
+  <!-- TAKEAWAYS -->
+  <div class="section">
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>Compact neighborhoods like the North End and Back Bay tend to score highest on the Transit Friendliness Index.</li>
+      <li>Peripheral neighborhoods often have lower sidewalk and bike path coverage, indicating potential targets for infrastructure investment.</li>
+      <li>Overlaying sidewalk, bike, and subway access helps visualize gaps and prioritize equity-focused transit planning.</li>
+    </ul>
+  </div>
+
+  <!-- REFERENCES -->
+  <div class="section">
+    <h2>References</h2>
+    <ul>
+      <li>Canesi, R. (2022). <em>Urban Policy Sustainability through a Value-Added Densification Tool</em>. <a href="https://www.mdpi.com/2071-1050/14/14/8762">[link]</a></li>
+      <li>Younes, H. et al. (2024). <em>The Traffic Calming Effect of Delineated Bicycle Lanes</em>. <a href="https://www.sciencedirect.com/science/article/pii/S2667091724000013">[link]</a></li>
+      <li><a href="https://data.boston.gov">Data.Boston.gov</a> | <a href="https://www.mass.gov/info-details/massgis-data-mbta-rapid-transit">MassGIS MBTA Data</a></li>
+    </ul>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    DS4200 Final Project – Emily Nguyen, Kuan-Chun Chiu, Aadit Bhatia
+  </footer>
+
+  <!-- D3 Visualizations -->
   <script src="website.js"></script>
 </body>
 
