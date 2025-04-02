@@ -17,7 +17,6 @@ d3.csv("scatter_plot.csv").then(data => {
               .append("svg")
               .attr("width", width)
               .attr("height", height)
-              .style("background", "lightyellow")
   
   let yscale = d3.scaleLinear()
                  .domain([0,1])
