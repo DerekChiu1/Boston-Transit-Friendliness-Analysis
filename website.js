@@ -13,7 +13,7 @@ d3.csv("scatter_plot.csv").then(data => {
     right: 50
   }
   
-  let svg = d3.select("body")
+  let svg = d3.select("#area-vs-tfi-scatter")
               .append("svg")
               .attr("width", width)
               .attr("height", height)
