@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <title>Boston Neighborhood Transit Friendliness</title>
 
-  <!-- D3 -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -37,12 +36,12 @@
   <!-- VISUALIZATION 1 -->
   <div class="section">
     <h2>Sidewalk and Bike Path Densities by Neighborhood</h2>
-    <div class="viz">
-      <img src="sidewalk_bike_density_bar.png" alt="Bar plot of sidewalk and bike path density by neighborhood">
-    </div>
     <p>
       This bar chart highlights the variation in sidewalk and bike path densities across Boston neighborhoods. It reveals infrastructure concentration in central areas like Back Bay and Downtown, and a relative scarcity in outer neighborhoods such as West Roxbury.
     </p>
+    <div class="viz">
+      <img src="density_barplot.png" alt="Bar plot of sidewalk and bike path density by neighborhood">
+    </div>
   </div>
 
   <!-- VISUALIZATION 2 -->
@@ -62,19 +61,19 @@
     <p>
       This map provides a structural overview of Boston’s sidewalk and bike path networks. Toggle layers on or off to explore where infrastructure is concentrated and where gaps might exist. The interactive functionality helps identify priorities for transit-oriented development.
     </p>
-    <div class="viz interactive-map" id="infrastructure-map">
-      <!-- Interactive map overview will render here -->
+    <div class="viz">
+      <iframe src="infrastructure_map.html" width="100%" height="500px" style="border: none; border-radius: 8px;"></iframe>
     </div>
   </div>
-
+  
   <!-- VISUALIZATION 4 -->
   <div class="section">
     <h2>Interactive Map: Walkability Scores by Neighborhood</h2>
     <p>
       Each Boston neighborhood is shaded based on its calculated TFI score. Hover or click to explore walkability values, view detailed metrics like average sidewalk and bike path length, and identify areas with strong or weak infrastructure support.
     </p>
-    <div class="viz interactive-map" id="walkability-map">
-      <!-- Interactive TFI choropleth map will render here -->
+    <div class="viz">
+      <iframe src="walkability_score_map.html" width="100%" height="500px" style="border: none; border-radius: 8px;"></iframe>
     </div>
   </div>
 
@@ -84,8 +83,13 @@
     <p>
       This lollipop chart ranks Boston’s neighborhoods by their Transit Friendliness Index score. Use the slider to filter neighborhoods within specific score ranges and highlight outliers with particularly high or low accessibility.
     </p>
-    <div class="viz" id="tfi-lollipop-chart">
-      <!-- D3 lollipop chart will render here -->
+    <div class="viz">
+      <iframe 
+      src="altair_scatter.html" 
+      width="800" 
+      height="650" 
+      style="border: none; display: block; margin: 0 auto; border-radius: 8px;">
+      </iframe>
     </div>
   </div>
 
