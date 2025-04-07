@@ -57,7 +57,7 @@
   <div class="section">
     <h2>Interactive Map: Walkability Scores by Neighborhood</h2>
     <p>
-      Each Boston neighborhood is shaded based on its calculated TFI score. Hover or click to explore walkability values, view detailed metrics like average sidewalk and bike path length, and identify areas with strong or weak infrastructure support.
+      Each Boston neighborhood is shaded based on its calculated TFI score. Hover or click to explore walkability values, view detailed metrics like average sidewalk and bike path length, and identify areas with strong or weak infrastructure support. Transit friendliness is a weighted averages of the density of sidewalk length and bike length per unit of area in a neighborhod. We weight bike paths 3 times heavier in the TFI because they can carry about 3 times more people than sidewalks per unit of length. Research on the <a href="https://www.sciencedirect.com/science/article/pii/S2352146516305403" target="_blank">'Capacity and Behaviour on One-way Cycle Tracks of Different Widths'</a> shows that one lane paths can throughput ~3500 passnegers an hour, while on sidewalks the city of New York estimates less than 1500 can fit comfortably. These estimates are highly dependent on specific infrastrcuture settings and space, so we chose a round figure to give a general sense of the carrying capacity of each path type.
     </p>
     <div class="viz">
       <iframe src="walkability_score_map.html" width="100%" height="500px" style="border: none; border-radius: 8px;"></iframe>
