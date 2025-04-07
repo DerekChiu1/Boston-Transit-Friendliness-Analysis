@@ -29,14 +29,14 @@
   <div class="section">
     <h2>Methodology</h2>
     <p>
-      Our dataset sources include GeoJSON and shapefiles from <a href="https://data.boston.gov">Data.Boston.gov</a> and <a href="https://www.mass.gov/info-details/massgis-data-mbta-rapid-transit">MassGIS</a>. Using Python with GeoPandas, we aligned coordinate systems, cleaned invalid geometries, and calculated densities and lengths of infrastructure per neighborhood. These metrics were then synthesized into a custom Transit Friendliness Index (TFI), accounting for sidewalk coverage, bike path density, and subway proximity.
+      Our dataset sources include GeoJSON and shapefiles from <a href="https://data.boston.gov">Data.Boston.gov</a>. Using Python with GeoPandas, we aligned coordinate systems, cleaned invalid geometries, and calculated densities and lengths of infrastructure per neighborhood. These metrics were then synthesized into a custom Transit Friendliness Index (TFI), accounting for sidewalk coverage and bike path density per unit of land area.
     </p>
   </div>
 
   <!-- VISUALIZATION 1 -->
   <div class="section">
     <h2>Sidewalk and Bike Path Densities by Neighborhood</h2>
-      This bar chart shows that dense, central neighborhoods like the Leather District and Bay Village have the highest sidewalk densities, while outer areas like Hyde Park and East Boston have significantly lower infrastructure coverage. Bike path density is low overall and unevenly distributed, highlighting gaps in cycling support across Boston.
+      This bar chart shows that populated, central neighborhoods like the Leather District and Bay Village have the highest sidewalk densities, while outer areas like Hyde Park and East Boston have significantly lower infrastructure coverage. Bike path density is low overall and unevenly distributed, highlighting gaps in cycling support across Boston.
     <div class="viz">
       <img src="density_barplot.png" alt="Bar plot of sidewalk and bike path density by neighborhood">
     </div>
