@@ -21,7 +21,21 @@
   <div class="section">
     <h2>Introduction</h2>
     <p>
-      Walkability and accessible infrastructure are key factors in the quality of life for urban residents. Boston, ranked 4th in the nation for public transit usage, presents a compelling case for understanding the spatial distribution of sidewalks, bike paths, and subway lines. This project introduces a Transit Friendliness Index (TFI) to evaluate and visualize the accessibility of different neighborhoods in Boston.
+      Walkability and accessible infrastructure are key factors in the quality of life for urban residents. Across the United States, a wide movement has been growing to advocate the importance of building more pedestrian and bike lanes, while limiting the access of cars in cities. Boston, ranked 4th in the nation for public transit usage, presents a compelling case for understanding the spatial distribution of sidewalks and bike paths. In order to understand whether Boston satisfies this transit demand, our project introduces a Transit Friendliness Index (TFI) to evaluate and visualize the accessibility of sidewalks and bike paths within each neighborhoods in Boston.
+    </p>
+  </div>
+
+  <!-- Data source -->
+  <div class="section">
+    <h2>Data Source</h2>
+    <p>
+      Source 1: Data.Boston.gov <br><a href="https://data.boston.gov/dataset/existing-bike-network-20221">Existing Bike Network Data</a>, <a href="https://data.boston.gov/dataset/bpda-neighborhood-boundaries">BPDA Neighborhood Boundaries</a><br><br>
+      Source 2: Mass.gov: <br><a href="https://gis.data.mass.gov/maps/boston::sidewalk-inventory/about">Sidewalk Inventory data dictionary</a><br><br>
+      The bike network data is a shp file of size 737 KB, while the sidewalk and boston neighborhood data are geojson files with size of 3.59 MB and 56.8 MB.
+      The bike network file contains attribute columns of street name, bike path length, and road inventory number. Its spatial column includes the geometry of each bike path, including its coordinates data to indicate the location.
+      Next, the boston neighborhood file contains attribute of the neighborhood name and the geometry, providing coordinates data for each neighborhood.
+      Lastly, the sidewalk file contains attribute of sidewalk type, length, and geometry (coordinates data).
+      
     </p>
   </div>
 
@@ -38,7 +52,7 @@
     <h2>Sidewalk and Bike Path Densities by Neighborhood</h2>
       This bar chart shows that populated, central neighborhoods like the Leather District and Bay Village have the highest sidewalk densities, while outer areas like Hyde Park and East Boston have significantly lower infrastructure coverage. Bike path density is low overall and unevenly distributed, highlighting gaps in cycling support across Boston.
     <div class="viz">
-      <img src="density_barplot.png" alt="Bar plot of sidewalk and bike path density by neighborhood">
+      <img src="Plots/density_barplot.png" alt="Bar plot of sidewalk and bike path density by neighborhood">
     </div>
   </div>
 
@@ -49,7 +63,7 @@
       This map provides a structural overview of Boston’s sidewalk and bike path networks. Toggle layers on or off to explore where infrastructure is concentrated and where gaps might exist. The interactive functionality helps identify priorities for transit-oriented development.
     </p>
     <div class="viz">
-      <iframe src="infrastructure_map.html" width="100%" height="500px" style="border: none; border-radius: 8px;"></iframe>
+      <iframe src="Plots/infrastructure_map.html" width="100%" height="500px" style="border: none; border-radius: 8px;"></iframe>
     </div>
   </div>
   
@@ -60,7 +74,7 @@
       Each Boston neighborhood is shaded based on its calculated TFI score. Hover or click to explore walkability values, view detailed metrics like average sidewalk and bike path length, and identify areas with strong or weak infrastructure support.
     </p>
     <div class="viz">
-      <iframe src="walkability_score_map.html" width="100%" height="500px" style="border: none; border-radius: 8px;"></iframe>
+      <iframe src="Plots/walkability_score_map.html" width="100%" height="500px" style="border: none; border-radius: 8px;"></iframe>
     </div>
   </div>
 
@@ -72,7 +86,7 @@
     </p>
     <div class="viz">
       <iframe 
-      src="altair_scatter.html" 
+      src="Plots/altair_scatter.html" 
       width="800" 
       height="650" 
       style="border: none; display: block; margin: 0 auto; border-radius: 8px;">

@@ -1,4 +1,4 @@
-d3.csv("scatter_plot.csv").then(data => {
+d3.csv("Data/scatter_plot.csv").then(data => {
     data.forEach(d => {
         d.area_km2 = +d.area_km2;
         d.transit_friendliness_index = +d.transit_friendliness_index;
