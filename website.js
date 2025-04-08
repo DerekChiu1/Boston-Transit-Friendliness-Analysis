@@ -45,6 +45,11 @@ d3.csv("Data/scatter_plot.csv").then(data => {
      .attr("y", 15)
      .attr("transform", "rotate(-90)")
 
+  svg.append("text")
+     .text("Neighborhood Area vs. Transit Friendliness Index")
+     .attr("x", width/5)
+     .attr("y", 20)
+
   let circles = svg.selectAll("circle")
                    .data(data)
                    .enter()

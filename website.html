@@ -71,7 +71,7 @@
   <div class="section">
     <h2>Interactive Map: Walkability Scores by Neighborhood</h2>
     <p>
-      Each Boston neighborhood is shaded based on its calculated TFI score. Hover or click to explore walkability values, view detailed metrics like average sidewalk and bike path length, and identify areas with strong or weak infrastructure support.
+      Each Boston neighborhood is shaded based on its calculated TFI score. Hover or click to explore walkability values, view detailed metrics like average sidewalk and bike path length, and identify areas with strong or weak infrastructure support. Transit friendliness is a weighted averages of the density of sidewalk length and bike length per unit of area in a neighborhod. We weight bike paths 3 times heavier in the TFI because they can carry about 3 times more people than sidewalks per unit of length. Research on the <a href="https://www.sciencedirect.com/science/article/pii/S2352146516305403" target="_blank">'Capacity and Behaviour on One-way Cycle Tracks of Different Widths'</a> shows that one lane paths can throughput ~3500 passnegers an hour, while on sidewalks the city of New York estimates less than 1500 can fit comfortably. These estimates are highly dependent on specific infrastrcuture settings and space, so we chose a round figure to give a general sense of the carrying capacity of each path type.
     </p>
     <div class="viz">
       <iframe src="Plots/walkability_score_map.html" width="100%" height="500px" style="border: none; border-radius: 8px;"></iframe>
@@ -98,7 +98,7 @@
     <div class="section">
       <h2>Neighborhood Area vs. Transit Friendliness Index</h2>
       <p>
-        This scatter plot compares each neighborhood's physical area to its overall TFI score. The trend suggests smaller, denser areas often rank higher in walkability, potentially due to more compact and accessible layouts.
+        This scatter plot compares each neighborhood's physical area to its overall TFI score. The trend suggests smaller, denser areas often rank higher in walkability, potentially due to more compact and accessible layouts. This could lead to greater reliance on automobiles in larger neighborhoods, which may have less efficient public transit access.
       </p>
       <div class="viz" id="area-vs-tfi-scatter">
         <!-- D3 will render scatterplot here -->
@@ -107,13 +107,22 @@
 
   <!-- TAKEAWAYS -->
   <div class="section">
-    <h2>Key Takeaways</h2>
+    <h2>Summary</h2>
     <ul>
       <li>Compact neighborhoods like the North End and Back Bay tend to score highest on the Transit Friendliness Index.</li>
       <li>Peripheral neighborhoods often have lower sidewalk and bike path coverage, indicating potential targets for infrastructure investment.</li>
       <li>Overlaying sidewalk, bike, and subway access helps visualize gaps and prioritize equity-focused transit planning.</li>
     </ul>
   </div>
+
+  <!-- CONCLUSIONS -->
+<div class="section">
+  <h2>Conclusions</h2>
+  <p>
+    Access to quality transit infrastructure significantly influences urban living standards, environmental sustainability, and public health outcomes. Neighborhoods with comprehensive sidewalk and bike path networks encourage active transportation, which contributes to lower vehicle dependency, reduced air pollution, and improved overall health. Strategic investment in equitable public transit infrastructure can bridge existing accessibility gaps, enhance connectivity across Boston's diverse neighborhoods, and promote healthier, more sustainable urban environments for all residents.
+  </p>
+</div>
+
 
   <!-- REFERENCES -->
   <div class="section">
@@ -122,6 +131,8 @@
       <li>Canesi, R. (2022). <em>Urban Policy Sustainability through a Value-Added Densification Tool</em>. <a href="https://www.mdpi.com/2071-1050/14/14/8762">[link]</a></li>
       <li>Younes, H. et al. (2024). <em>The Traffic Calming Effect of Delineated Bicycle Lanes</em>. <a href="https://www.sciencedirect.com/science/article/pii/S2667091724000013">[link]</a></li>
       <li><a href="https://data.boston.gov">Data.Boston.gov</a> | <a href="https://www.mass.gov/info-details/massgis-data-mbta-rapid-transit">MassGIS MBTA Data</a></li>
+      <li>Capacity and Behaviour on One-way Cycle Tracks of Different Widths. <em>Transportation Research Procedia</em>. Retrieved from: <a href="https://www.sciencedirect.com/science/article/pii/S2352146516305403\" target="_blank\">[link]</a></li>
+      <li>Pedestrian Level of Service, New York City Department of City Planning. Retrieved from: <a href="https://www.nyc.gov/site/planning/planning-level/transportation/pedestrian-level-of-service.page\" target="_blank\">[link]</a></li>  
     </ul>
   </div>
 
