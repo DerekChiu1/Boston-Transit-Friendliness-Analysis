@@ -50,7 +50,7 @@
   <!-- VISUALIZATION 1 -->
   <div class="section">
     <h2>Sidewalk and Bike Path Densities by Neighborhood</h2>
-      This bar chart shows that populated, central neighborhoods like the Leather District and Bay Village have the highest sidewalk densities, while outer areas like Hyde Park and East Boston have significantly lower infrastructure coverage. Bike path density is low overall and unevenly distributed, highlighting gaps in cycling support across Boston.
+      This bar chart shows that populated, central neighborhoods like the Leather District and Bay Village have the highest sidewalk densities, while outer areas like Hyde Park and East Boston have significantly lower infrastructure coverage. Bike path density is low overall and unevenly distributed, highlighting gaps in cycling support across Boston. This could indicate some areas that are more heavily reliant on non-public transit options, such as cars or taxis and overlap with less central neighborhoods.
     <div class="viz">
       <img src="Plots/density_barplot.png" alt="Bar plot of sidewalk and bike path density by neighborhood">
     </div>
@@ -60,7 +60,7 @@
   <div class="section">
     <h2>Interactive Map: Sidewalk and Bike Path Infrastructure</h2>
     <p>
-      This map provides a structural overview of Boston’s sidewalk and bike path networks. Toggle layers on or off to explore where infrastructure is concentrated and where gaps might exist. The interactive functionality helps identify priorities for transit-oriented development.
+      This map provides a structural overview of Boston’s sidewalk and bike path networks. Toggle layers on or off to explore where infrastructure is concentrated and where gaps might exist. The interactive functionality helps identify priorities for transit-oriented development. One takeaway that stands out is how bike paths often serve as major arterires for passengers to flow through the city, and converge in central neighborhoods like Back Bay and Downtown, which could indicate a greater investment in transit in these areas.
     </p>
     <div class="viz">
       <iframe src="Plots/infrastructure_map.html" width="100%" height="500px" style="border: none; border-radius: 8px;"></iframe>
@@ -82,7 +82,7 @@
   <div class="section">
     <h2>Transit Friendliness Index by Neighborhood</h2>
     <p>
-      This lollipop chart ranks Boston’s neighborhoods by their Transit Friendliness Index score. Use the slider to filter neighborhoods within specific score ranges and highlight outliers with particularly high or low accessibility.
+      This lollipop chart ranks Boston’s neighborhoods by their Transit Friendliness Index score. Use the slider to filter neighborhoods within specific score ranges and highlight outliers with particularly high or low accessibility. One trend that the interactivity reveals is the clustering of neighborhoods with similar TFI scores. The highest scoring neighborhoods have similar ratings, after which there is a discrete drop to the second tier(Fenway, Back Bay, West End), followed by another drop. This could indicate a structural gap beteween the highest and lowest scoring neighborhoods.
     </p>
     <div class="viz">
       <iframe 
@@ -98,7 +98,7 @@
     <div class="section">
       <h2>Neighborhood Area vs. Transit Friendliness Index</h2>
       <p>
-        This scatter plot compares each neighborhood's physical area to its overall TFI score. The trend suggests smaller, denser areas often rank higher in walkability, potentially due to more compact and accessible layouts. This could lead to greater reliance on automobiles in larger neighborhoods, which may have less efficient public transit access.
+        This scatter plot compares each neighborhood's physical area to its overall TFI score. The trend suggests smaller, denser areas often rank higher in walkability, potentially due to more compact and accessible layouts. This could lead to greater reliance on automobiles in larger neighborhoods, which may have less efficient public transit access. However, the regression also exhibits heteroskedastcity, or a change in variance. There is great variance between the smallest neighborhoods, which can have high or low scores, but the largest neighborhoods tend to have lower scores. This could indicate that the largest neighborhoods are less walkable, and have less access to public transit, which is a common trend in urban planning.
       </p>
       <div class="viz" id="area-vs-tfi-scatter">
         <!-- D3 will render scatterplot here -->
