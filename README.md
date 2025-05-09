@@ -35,19 +35,21 @@ This project analyzes the friendliness of transit options of sidewalks and bike 
 
 ## How to Use the Website
 ### Website Overview:
-
+This website can be splitted into 3 major parts. The first part contains introduction, data sources, and methodology, which explains the project's topic, data used, and our approach. The second part contains 5 visualizations, including 2 maps, 1 bar chart, 1 lollipop chart, and 1 scatter plot. The third part contains summary, conclusion, and references, which summarized and highlighted the project's key takeaways and referenced the information used throughout the project. In the second part, the bar chart shows the density (km/km²) of sidewalks and bike paths of all Boston neighborhoods, sorted increasingly based on sidewalk's density. The first map is a Boston map showing the distribution of sidewalks and bike paths, denoted by blue and red lines respectively. The second map is a choropleth map showing the transit friendliness score of all Boston neighborhoods, where the magnitude of scores are denoted by the change of darkness of colors representing each neighborhood. The lollipop chart shows the transit friendliness score for all 23 neighborhoods, sorted decreasingly. Lastly, the scatter plot shows the relationship between the area of neighborhoods and their transit scores. Under the title for each graph, there's a short description of the graph to help readers understand it and highlight the takeaways.
 
 ### Visit the Dataset
-
+If you want to visit the datasets used for this project, go to the Data Source section where you'll find two sources, which are Data.Boston.gov and Mass.gov. Under these two sources, name of the datasets obtained from them are shown. By clicking the hyperlniks of the dataset names, you'll be directed to the pages where you can download the data. On these pages, you can also see description of the sources and datasets to better understand them.
 
 ### Interactive Functionalities:
 
 
 
-## Analysis You Can Do Using This Dashboard
-- 
-- 
-- 
+## Analysis You Can Do Using This Website
+- Is there an unequal distribution of resource and access to sidewalks and bike paths for any particular neighborhoods?
+- What's the relatinoship between the neighborhood areas and their transit friendliness scores?
+- What's the neighborhood with the highest or lowest number of bike paths?
+- What percentage of the Boston neighborhoods have the sidewalk density over 20 km/km² ?
+- Does higher number/density of bike paths correspond to higher number/density of sidewalks?
 
 ## Contributors
 1. Kuan-Chun Chiu (Myself) - beagledirk1@gmail.com
